@@ -251,4 +251,24 @@ x
 #To extract the 6th TO the 8th row and assign them to the variable x
 x <- m[6:8,]
 x
+######################################CHALLENGE 2,3 #####################
+x <- m[(2,2):(6,9)]
+x
+
+x <- m[2:6,2:9]
+x
+###########################Challenge 3 #############################
+#
+a array[(5x5x4x4), by=400:1]
+#
+#Second time trying:
+a <- array(seq(400,1), dim= c(5,5,4,4))
+a
+a <- array(seq(400,1), dim= c(5,5,4,4))
+> a
+a <- array(seq(400,1), dim= c(5,5,4,4))
+> a
+a <- array(seq(400,1), dim= c(5,5,4,4))
+> a
+
 
