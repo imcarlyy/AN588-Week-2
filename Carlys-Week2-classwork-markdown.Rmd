@@ -221,4 +221,34 @@ splited_sentence
 #FOURTH STEP: TRIAL 1 (EXTRACTING EVERY 3RD WORD/ELEMENT FROM THE VECTOR)
 every_3rd_element <- splited_sentence[seq(3, length(splited_sentence), by = 3 ) ]
 every_3rd_element
+#
+#
+#*********************WORKING ON CHALLENGE 2 *******************************
+#
+#FIRST STEP: LOOK AT THE EXAMPLE FOR A MATRIX:
+m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
+m
+#
+#2) SECOND STEP: if I wanted to extract an element, for instance here, the element in row 4, column 5, AND assign it to a new variable, x, I would do this: 
+x <- m[4, 5] #this is the command that I would use to do what I just mentioned before. 
+x #this is what I would write to see the result of my command
+#
+#
+#2.1 You can also see this process like this: 
+#
+#
+
+x <- m[,c(2,3,6)]
+#This is how you complete challenge 2, part 1
+x <- m[,c(2,3,6)]
+#Now, trying to complete challenge 2, part 2:
+x <- m[c(6,8),]
+x
+x <- m[c(6:8),]
+x
+x <- m[,c(2,3,6)]
+x
+#To extract the 6th TO the 8th row and assign them to the variable x
+x <- m[6:8,]
+x
 
