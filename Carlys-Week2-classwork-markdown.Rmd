@@ -1,0 +1,128 @@
+---
+title: "Carlys-coding-challenges-markdown"
+output: html_document
+date: "2025-02-06"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+m <- matrix(data = c(1, 2, 3, 4), nrow = 2, ncol = 2)
+m
+
+#Matrices are typically filled column-wise, with the argument, byrow, set to FALSE by default, but this can be changed by specifying this argument as TRUE. For example, this is how it's set by default. 
+
+m <- matrix(data = c(1, 2, 3, 4, 5, 6), nrow = 2, ncol = 3, byrow = FALSE)
+m
+
+#This is how it could be if you want to fill it row-wise: 
+
+m <- matrix(data = c(1, 2, 3, 4, 5, 6), nrow = 2, ncol = 3, byrow = TRUE)
+m
+
+#Now, to also create matrices in R by binding vectors of the same length together either row-wise (with the function rbind()) or column-wise (with the function cbind()). Like this: 
+v1 <- c(1, 2, 3, 4)
+v2 <- c(6, 7, 8, 9)
+m1 <- rbind(v1, v2)
+m1
+
+v1 <- c(1, 2, 3, 4)
+v2 <- c(6, 7, 8, 9)
+m1 <- cbind(v1, v2)
+m1
+
+v1 <- c(1, 2, 3, 4)
+v2 <- c(6, 7, 8, 9)
+m1 <- rbind(v1, v2)
+m1
+
+m2 <- cbind(v1, v2)
+m2
+
+class(m1)
+
+dim(m1)
+
+class(m2)
+dim(m2)
+
+colnames(m1)
+colnames(m2)
+#
+#
+#############################################################
+#
+#NOTE: in this example, rownames are not defined, since cbind() was used to create the matrix
+#
+rownames(m2)
+#
+#Okay, now: The structure (str()) command can be applied to any data structure to provide details about that object. This is an incredibly useful function that you will find yourself using over and over again. For example: 
+
+str(m2)
+
+#*********************** You got this as result down in your console: ************************************
+
+#num [1:4, 1:2] 1 2 3 4 6 7 8 9
+#- attr(*, "dimnames")=List of 2
+# ..$ : NULL
+#  ..$ : chr [1:2] "v1" "v2"
+
+#***********You need to undestand that:******************
+#
+#1) num: This means m2 is a numeric object (likely a matrix or array).
+#
+#2) [1:4, 1:2]: The dimensions of m2. It's a 4x2 matrix (4 rows, 2 columns).
+#
+#3) 1 2 3 4 6 7 8 9: These are the values stored in the matrix, read in column-major order (the first column has 1, 2, 3, 4, the second column has 6, 7, 8, 9).
+#
+#4) attr(*, "dimnames"): This tells us about the dimension names (like row and column names).
+#The first part ..$ : NULL means there are no names for the #rows.
+#The second part ..$ : chr [1:2] "v1" "v2" tells us that the column names are "v1" and "v2".
+#
+#
+#Overall, In this case, it's a 4x2 matrix with numeric values and column names "v1" and "v2".
+#
+#*****************************************CLOSING THIS EXAMPLE ****************************
+#
+a <- array(data = 1:90, dim = c(5, 6, 3))
+a
+
+v <- 1:100
+v
+#You can select the first 15 elements as follows:
+v[1:15]
+
+#You can also give a vector of index values to use to subset:
+v[c(2, 4, 6, 8, 10)]
+
+v <- 101:200
+v[seq(from = 1, to = 100, by = 2)]
+#
+#Remember that the 1, 16, 31 and 46 from your out mean:
+#The first value, 101, is at position 1 in the output vector.
+#The 16th value, 131, is at position 16 in the output vector.
+#The 31st value, 161, is at position 31 in the output vector.
+#The 46th value, 191, is at position 46 in the output vector.
+#
+#
