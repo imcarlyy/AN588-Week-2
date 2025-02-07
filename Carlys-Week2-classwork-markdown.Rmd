@@ -126,3 +126,99 @@ v[seq(from = 1, to = 100, by = 2)]
 #The 46th value, 191, is at position 46 in the output vector.
 #
 #HI
+#
+#
+#*********************************THIS IS WHERE CHALLENGE 1 BEGINS GURL. GOOD LUCK! **********************
+
+sentence<-"Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+gsub("[[:punct:]]","",*string*)
+#
+#
+#00000000000000000000000000000000000000000000000000000000000
+#MENTAL NOTE: DONT FORGET TO DO THIS TO INSTALL THE STRINGR PACKAGE 
+
+#install.packages("stringr")  # Only if you haven't installed the package yet
+#library(stringr)  # Load the stringr package
+
+#000000000000000000000000000000000000000000000000000000000000
+#
+#
+sentence<-Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.
+sentence<-(Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.)
+
+sentence<-"Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+> sentence<-"Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+#
+wcstring<-matrix(data=Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.)
+#
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+words <- unlist(strsplit(sentence, "\\s+"))
+
+sentence<-"Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+
+sentence<-"Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+#
+#STEP ACOMPLISHED: CREATED A VECTOR OF 1, WORD CHARACTER STRING COMPRISING THE FIRST LINE OF THE NOVEL ULYSSES!!!
+#
+strsplit(sentence,"Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.")
+str_split(sentence,"Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."), simplify = TRUE)
+
+
+str_split(sentence,"Stately plump Buck Mulligan came from the stairhead bearing a bowl of lather on which a mirror and a razor lay crossed")
+str_split(sentence<-"Stately plump Buck Mulligan came from the stairhead bearing a bowl of lather on which a mirror and a razor lay crossed"), simplify=TRUE
+#
+str_split(sentence, Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed." ")
+str_split(fruits, " and ", simplify = TRUE)
+
+sentence<-"Stately plump Buck Mulligan came from the stairhead bearing a bowl of lather on which a mirror and a razor lay crossed"
+
+sentence<-"Stately plump Buck Mulligan came from the stairhead bearing a bowl of lather on which a mirror and a razor lay crossed"
+
+sentence<-“Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.”
+
+novel<-“Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.”
+
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+
+gsub("[[:punct:]]","Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.")
+
+
+#FIRST STEP: CREATE A VECTOR OF 1
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+
+words_vector <- str_split(sentence, "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.")[[1]]
+
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+
+words_vector <- str_split(sentence, " ")[[1]]
+print(words_vector)
+#STARTING AGAIN: STEP 1: CREATE A VECTOR
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+#STEP 2: SEE IF YOU CAN DIVIDE A SINGLE STRING INTO A VECTOR OF SUBSTRINGS BY TAKING A LOOK AT THE STRING PACKAGE AND THE FUNCTION str_split(). IN OTHER WORDS, SPLIT THE SENTENCE INTO WORDS. 
+mysplit_words<- str_split(sentence,"Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.")
+mysplit_words
+
+sentence <- "Esta es una oración de prueba"
+result <- str_split(sentence, " ")
+#
+#LETS DO IT ALL OVER AGAIN: 
+#FIRST STEP: 
+sentence<- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+#SECOND STEP: REMOVING THE PUNCTUATION FROM THIS SENTENCE
+sentencewno_punctiation <- gsub("[[:punct:]]","",sentence)
+sentencewno_punctiation
+#THIRD STEP: TRIAL 1: DONT DO THIS ONE
+splited_sentence <- str_split(sentence, "")[[1]]
+splited_sentence
+#THIRD STEP: TRIAL 2: DO THIS ONE!!! TO Split the cleaned sentence into words (vector)
+
+splited_sentence <- str_split(sentencewno_punctiation," ")[[1]]
+splited_sentence
+#FOURTH STEP: TRIAL 1 (EXTRACTING EVERY 3RD WORD/ELEMENT FROM THE VECTOR)
+every_3rd_element <- splited_sentence[seq(3, length(splited_sentence), by = 3 ) ]
+every_3rd_element
+
