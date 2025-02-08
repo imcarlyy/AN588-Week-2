@@ -271,4 +271,62 @@ a <- array(seq(400,1), dim= c(5,5,4,4))
 a <- array(seq(400,1), dim= c(5,5,4,4))
 > a
 
+#
+Lemuroidea <- c("Cheirogaleidae", "Lepilemuridae", "Indriidae", Lemuridae", Daubentoniidae")
+Lorisoidea<- c("Lorisidae", "Galagidae")
+Strepsirhini <- list(Lemuroidea, Lorisoidea)
+names(Strepsirhini) <- list("Lemuroidea", "Lorisoidea")
+Strepsirhini
+
+Platyrrhini <- c("Cebidae", "Atelidae", "Pitheciidae")
+Catarrhini <- c("Cercopithecidae", "Hylobatidae", "Hominidae")
+Anthropoidea <- list(Catarrhini, Platyrrhini)
+names(Anthropoidea) <- list("Catarrhini", "Platyrrhini")
+Anthropoidea
+#
+Tarsioidea <- c("Tarsiidae")
+names(Tarsioidea) <- list("Tarsiidae")
+#
+Haplorhini <- list(Anthropoidea, Tarsioidea)
+
+names(Haplorhini) <- list("Anthropoidea", "Tarsioidea")
+Haplorhini
+#
+#
+#
+#
+#
+#
+#Creating the Strepsirhini list
+Lemuroidea <- c("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae")
+Lorisoidea <- c("Lorisidae", "Galagidae")
+Strepsirhini <- list(Lemuroidea, Lorisoidea)
+names(Strepsirhini) <- list("Lemuroidea", "Lorisoidea")
+Strepsirhini
+#
+#
+#Creating the Harplorhini list
+Catarrhini <- c("Cercopithecidae", "Hylobatidae", "Hominidae")
+Platyrrhini <- c("Cebidae", "Atelidae", "Pitheciidae")
+Anthropoidea <- list(Catarrhini, Platyrrhini)
+names(Anthropoidea) <- list("Catarrhini", "Platyrrhini")
+Anthropoidea
+#
+#
+Tarsioidea <- c("Tarsiidae")
+names(Tarsioidea) <- list("Tarsiidae")
+Tarsioidea
+#
+#
+#Making Tarsioidea and Anthropoidea being inside Haplorhini
+Harplorhini <- list(Tarsioidea, Anthropoidea)
+names(Harplorhini) <- list("Tarsioidea", "Anthropoidea")
+Harplorhini
+###
+#Merging the Harplorhini and Strepsirhini list in one list: 
+Primates <- list (Haplorhini, Strepsirhini)
+names(Primates) <- list ("Harplorhini", "Strepsirhini")
+Primates
+
+
 
