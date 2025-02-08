@@ -434,3 +434,22 @@ new_df
 
 m3 <- matrix(data= c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow= 5, ncol= 3, byrow= TRUE)
 m3
+#
+#
+#Now, let's coerce the matrix to a data frame
+dataframed_m3 <-as.data.frame(m3)
+dataframed_m3
+#
+#
+#Now, as a data frame, I will coerce the second column to be logical-valued
+dataframed_m3[,2] <- as.logical(dataframed_m3[,2])
+dataframed_m3
+#
+#The following code is the same one as the previous one, but just with the instructions
+#Now, as a dataframe, let's coerce the third column to be factor-valued
+dataframed_m3[,3] <- as.factor(dataframed_m3[,3])
+dataframed_m3
+#
+#
+#When you are done, use the str() command to show the data type for each variable in your dataframe.
+str(dataframed_m3)
