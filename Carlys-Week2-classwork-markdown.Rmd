@@ -330,3 +330,107 @@ Primates
 
 
 hellooooooo
+#
+#
+##################################DATA FRAME LEARNING PART ########################
+
+df <- data.frame(firstName = c("Nitin", "Silvy", "Ingrid", "Claire"), major = c("Biology (CM)",
+    "Anthropology (Bio)", "Anthropology (Medical)", "Biology (EEB)"), sex = c("M",
+    "F", "F", "F"), yearInProgram = c(1, 2, 2, 3))
+df
+#
+#
+df <- read.csv("~/Desktop/random-people.csv", sep = ",", header = TRUE, stringsAsFactors = FALSE)
+# only print select columns
+df[, c(1, 3, 4, 11, 12)]
+#
+#
+df <- read.csv("C:/Users/Carly Rojas/OneDrive - Universidad San Francisco de Quito/Documentos/A_MS IN BIOLOGY/SCHMITT_588 Project Design and Statistics/random-people.csv", sep = ",", header = TRUE, stringsAsFactors = FALSE)
+# only print select columns
+df[, c(1, 3, 4, 11, 12)]
+#
+#
+#The following code will read from the file “random-people.csv”, currently stored on a user’s Desktop:
+
+df <- read.csv("C:/Users/Carly Rojas/OneDrive - Universidad San Francisco de Quito/Documentos/A_MS IN BIOLOGY/SCHMITT_588 Project Design and Statistics/random-people.csv", sep = ",", header = TRUE, stringsAsFactors = FALSE)
+# only print select columns
+df[, c(1, 3, 4, 11, 12)]
+#
+#So you kept having this issue where the fifth column was off (bottom). Therefore, in the following code, you just added the df_select part; a little different than the code Chris gave you in the Module ***df[, c(1, 3, 4, 11, 12)]***
+
+library(dplyr)
+df <- read.csv("C:/Users/Carly Rojas/OneDrive - Universidad San Francisco de Quito/Documentos/A_MS IN BIOLOGY/SCHMITT_588 Project Design and Statistics/random-people.csv", sep = ",", header = TRUE, stringsAsFactors = FALSE)
+df_selected <- df[, c(1, 3, 4, 11, 12)]
+df_selected
+#
+#AND NOW, if we want details about our project "df", we simply can put use the following function + df inside of it. You know, just to let it know that we want the details of the df project. 
+str(df)
+#
+#Now, you can ALSO select and subset data frames using bracket notation. You can also select named columns from a data frame the $ operator.For example...
+df[, 3]
+#OR, If you need a compact summary of the structure of the third column, you can also use this function/code: 
+str(df[, 3])
+str(df[, 3])
+#AND YOU MIGHT WONDER, WTF IS THE DIFFERENCE BETWEEN THE FIRST AND SECOND FUNCTION? THEY SORT OF GIVE YOU THE SAME RESUL. WELL, NOOOOOOO. 
+# The second command shows you more details of the third column, such as: 
+###    chr: The data type, meaning it's a character vector.
+#      [1:20]: The index range of elements in the vector (from 1 to 20 in this case).
+#      Then it shows the first few elements in the vector (the first names).
+#Overall, str(df[, 3]) The difference is that str() provides additional metadata about the structure of the object, which is especially useful when you're dealing with more complex data structures (e.g., lists, data frames, etc.).
+#
+#
+#Now, let's say you want to extract and display the values from the "name.last" column of the df data frame. Well, you would use the following code, which basically tells R "give me the column named 'name.last' from the data frame 'df'".
+df$name.last
+#
+#
+#The following code, on the other hand, Gives a compact summary of the structure of the "name.last" column, including its type (chr for character), its length ([1:20]), and a preview of the first few values in the column.
+str(df$name.last)
+#
+#
+#Now, if you want to ONLY select A COLUMN, i.e., the third column of the data frame df (or to select the 3rd element, if you want to think of it in terms of position), you use the following code: 
+df[3]
+#
+#
+#Okay, now again being more precise, IF YOU WANT TO ASK R to tell you about the structure of the third column of df, which has been extracted as a data frame, you use next function: str() + the previous function: LOOK!
+str(df[3])
+#
+#
+#Now, the following code will select the column named name.last from the data frame and return it as a data frame, rather than a vector. If you need a visual example of the difference in the results of this one, I'll leave a picture of it in your Notion folder. 
+df["name.last"]
+#
+#Now if we wanna be more precise with the info...
+str(df["name.last"])
+#
+#
+#OKAY, NOW, You can add rows (additional cases) or columns (additional variables) to a data frame using rbind() and cbind(). In other words, the cbind() function is used to add columns to a data frame. It stands for "column bind", and it allows us to bind new columns to an existing data frame.
+df <- cbind(df, id = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+    17, 18, 19, 20))
+df <- cbind(df, school = c("BU", "BU", "Harvard", "Harvard", "BU", "Boston College",
+    "MIT", "BU", "BU", "UMASS Boston", "Harvard", "BU", "Boston College", "BU",
+    "Harvard", "MIT", "Harvard", "BU", "UMASS Boston", "Harvard"))
+df
+#
+#Alternatively, you can extend a data frame by adding a new variable directly using the $ operator, like this:
+df$school <- c("BU", "BU", "Harvard", "Harvard", "BU", "Boston College", "MIT",
+    "BU", "BU", "UMASS Boston", "Harvard", "BU", "Boston College", "BU", "Harvard",
+    "MIT", "Harvard", "BU", "UMASS Boston", "Harvard")
+#
+#
+########################################   FILTERING ##################################
+#Logical vectors may also be used to subset data frames. Here, we subset the data frame for only those rows where the variable school is “BU”.
+new_df <- df[df$school == "BU", ]
+new_df
+#
+#
+#We can also choose to only return particular columns when we subset.
+new_df <- df[df$school == "BU", c("name.last", "name.first", "school")]
+new_df
+#
+#
+#
+#######################################CHALLENGE 5 ##############################
+#Store the following numbers as a 5 x 3 matrix, called “m3”: 3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2. Be sure to fill the matrix ROW-WISE.
+#
+
+m3 <- matrix(data= c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow= 5, ncol= 3, byrow= TRUE)
+m3
